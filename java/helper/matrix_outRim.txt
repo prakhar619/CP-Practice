@@ -1,0 +1,22 @@
+        for(int i = 0; i <= Math.max(maxR,maxC); i++)
+        {   
+            for(int j = 0; j <= Math.max(maxR, maxC); j++)
+            {
+                if(i <= maxR && j <= maxC && grid[i][j] == 1)
+                {
+
+                }
+                if(j <= maxR && i <= maxC && grid[j][i] == 1)
+                {
+
+                }
+                if(maxR - i >= 0 && maxC - j >= 0 && grid[maxR - i][maxC - j] == 1)
+                {
+
+                }
+                if(maxR - j >= 0 && maxC - i >= 0 && grid[maxR - j][maxC - i] == 1)
+                {
+
+                }
+            }
+        }
