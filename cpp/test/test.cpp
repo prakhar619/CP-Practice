@@ -8,6 +8,55 @@ typedef vector<int> vi;
 //Macros
 #define REP(i,a,b) for(int i = a; i <= b; i++)
 
+
+string minWindow(string s, string t) {
+        unordered_map<char,int> charFreq;
+        unordered_map<char,int> loop_charFreq;
+
+        for(char c : t)
+        charFreq[c]++;
+
+        int unmatch = 0;
+        for(pair<char,int> p : charFreq)
+        unmatch++;
+        
+        int l = 0, r = 0;
+        int minL = 0, minR= INT_MAX;
+
+
+        loop_charFreq[s[0]]++;
+        if(loop_charFreq[s[0]] == charFreq[s[0]])
+        unmatch--;
+
+        while(r < s.length())
+        {
+            r++;
+            if(charFreq[s[r]] != 0)
+            {
+                loop_charFreq[s[r]]++;
+                if(loop_charFreq[s[r]] == charFreq[s[r]])
+                    unmatch--;
+            }
+
+            while(l < r && (charFreq[s[l]] == 0 || loop_charFreq[s[l]] > charFreq[s[l]]))
+            {
+                if(loop_charFreq[s[l]] > charFreq[s[l]])
+                loop_charFreq[s[l]]--;
+                l++;
+            }
+            
+            if(unmatch == 0)
+            {
+                if(minR - minL > r - l)
+                {
+                    minR = r;
+                    minL = l;
+                }
+            }
+
+        }
+        return (unmatch == 0 ? s.substr(minL,minR) : "");
+}
 int main()
 {
     //1. Always use long unless input
@@ -45,32 +94,6 @@ int main()
     Uint    4.29e9      0
     Long    9.22e18     -9.22e18
     */
-   int n,m,k;
-   cin >> n; cin >> m; cin >> k;
-   vi ps(n,0);
-   REP(i,0,n-1)
-   {
-        cin >> ps[i];
-   }
-
-    int it = n - m + 1;
-    vector<long long> sums(it,0);
-    REP(i,0,m-1)
-    {
-        sums[0] += ps[i];
-    }
-    for(int i = 1; i + m -1 < ps.size(); i++)
-    {
-        sums[i] = sums[i-1] - ps[i-1] + ps[i+m-1];
-    }
-    REP(i,0,sums.size()-1)
-    cout << sums[i] << ":";
-    sort(sums.begin(),sums.end(),greater<long long>());
-    long long ans = 0;
-    REP(i,0,k-1)
-    {
-        ans += sums[i];
-    }
-    cout << ans;
+    cout << minWindow("OUZODYXAZV","XYZ");
     return 0;
 }

@@ -8,6 +8,7 @@ typedef vector<int> vi;
 //Macros
 #define REP(i,a,b) for(int i = a; i <= b; i++)
 
+
 int main()
 {
     //1. Always use long long (not even long) unless input
@@ -65,7 +66,8 @@ int main()
         
     sort(v.begin(),v.end())
     
-    
+    iterator lower_bound(v.begin(),v.end(),val)
+        log N
     */
     return 0;
 }
