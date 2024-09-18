@@ -9,53 +9,32 @@ typedef vector<int> vi;
 #define REP(i,a,b) for(int i = a; i <= b; i++)
 
 
-string minWindow(string s, string t) {
-        unordered_map<char,int> charFreq;
-        unordered_map<char,int> loop_charFreq;
+void helper(vector<int>&nums, vector<vector<int>>& ans, vector<int> v, int curr, int lastNum)
+{
+    if(curr >= nums.size())
+    {
+        ans.push_back(v);
+        return;
+    }
 
-        for(char c : t)
-        charFreq[c]++;
+    while(nums[curr] == lastNum && curr < nums.size())
+    curr++;
 
-        int unmatch = 0;
-        for(pair<char,int> p : charFreq)
-        unmatch++;
-        
-        int l = 0, r = 0;
-        int minL = 0, minR= INT_MAX;
+    int x = nums[curr];
+    while(nums[curr] == x && curr < nums.size())
+    {
+        helper(nums,ans,v,curr+1,lastNum);
+        v.push_back(nums[curr]);
+        lastNum = nums[curr];
+        curr++;
+    }
+}
 
-
-        loop_charFreq[s[0]]++;
-        if(loop_charFreq[s[0]] == charFreq[s[0]])
-        unmatch--;
-
-        while(r < s.length())
-        {
-            r++;
-            if(charFreq[s[r]] != 0)
-            {
-                loop_charFreq[s[r]]++;
-                if(loop_charFreq[s[r]] == charFreq[s[r]])
-                    unmatch--;
-            }
-
-            while(l < r && (charFreq[s[l]] == 0 || loop_charFreq[s[l]] > charFreq[s[l]]))
-            {
-                if(loop_charFreq[s[l]] > charFreq[s[l]])
-                loop_charFreq[s[l]]--;
-                l++;
-            }
-            
-            if(unmatch == 0)
-            {
-                if(minR - minL > r - l)
-                {
-                    minR = r;
-                    minL = l;
-                }
-            }
-
-        }
-        return (unmatch == 0 ? s.substr(minL,minR) : "");
+vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+    sort(nums.begin(),nums.end());
+    vector<vector<int>> ans;
+    helper(nums,ans,{},0,INT_MIN);
+    return ans;
 }
 int main()
 {
@@ -94,6 +73,18 @@ int main()
     Uint    4.29e9      0
     Long    9.22e18     -9.22e18
     */
-    cout << minWindow("OUZODYXAZV","XYZ");
+    
+   vector<int> a = {1,1,2};
+   auto x = subsetsWithDup(a);
+   for(auto y : x)
+   {
+        cout << "[" ;
+        for(auto z : y)
+        cout << z << " " ;
+        cout << "] "; 
+   }
+   
+
+
     return 0;
 }

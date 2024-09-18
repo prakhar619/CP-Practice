@@ -2,6 +2,7 @@
 #define modVal 100000007
 using namespace std;
 
+//should be static or not be present in the class
 bool sortCustom(pair<int,int> pt1, pair<int,int> pt2)
 {
     if(pt1.second == 0 && pt2. second == 0)

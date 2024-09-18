@@ -3,3 +3,4 @@
 3. Valid Binary Search Tree
 4. Kth Smallest in Tree
 5. Binary Tree from InOrder and PreOrder Traversal
+6. Serialize/Deserialize Tree into a string

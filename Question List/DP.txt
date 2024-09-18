@@ -1,0 +1,6 @@
+1. Longest Palindromic Substring (DP and tricy method)
+2. Coin Change
+3. Maximum Product Subarray
+4. Maximum Sum Subarray
+5. Word Break
+6. Partition Equal Subset Sum
