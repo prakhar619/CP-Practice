@@ -36,76 +36,34 @@ int     2.1e9
  /* String
   * str.length()
   */
-public class sample
-{
-    public int modVal = 1000000007;
-
-    public int orangesRotting(int[][] grid) {
-        int ans = 0;
-        int inc = 1;
-        while(inc > 0)
-        {
-            int new_grid[][] = new int[grid.length][grid[0].length];
-            for(int i = 0; i < grid.length; i++)
-            for(int j = 0; j < grid[i].length; j++)
-            {
-                new_grid[i][j] = grid[i][j];
-            }
-            inc = 0;
-            for(int i = 0; i < grid.length; i++)
-            {
-                for(int j = 0; j < grid[i].length; j++)
-                {
-                    if(grid[i][j] == 2)
-                    {
-                            if(i + 1 < grid.length && grid[i+1][j] == 1)
-                            {
-                                new_grid[i+1][j] = 2;
-                                inc++;
-                            }
-                            if(i -1 >= 0 && grid[i-1][j] == 1)
-                            {
-                                new_grid[i-1][j] = 2;
-                                inc++;
-                            }
-                            if(j+1 < grid[i].length && grid[i][j+1] == 1)
-                            {
-                                new_grid[i][j+1] = 2;
-                                inc++;
-                            }
-                            if(j-1 >= 0 && grid[i][j-1] == 1)
-                            {
-                                new_grid[i][j-1] = 2;
-                                inc++;
-                            }
-                    }
-                }
-            }
-            grid = new_grid;
-            if(inc > 0)
-            ans++;
-            //System.out.println(inc);
-        }
-        int flg = ans;
-        for(int i = 0; i < grid.length; i++)
-        for(int j = 0; j < grid.length; j++)
-        {
-            if(grid[i][j] == 1)
-            flg = -1;
-        }
-        return flg;
+  class Parent {
+    void show() { System.out.println("Parent's show()"); }
+}
+ 
+// Inherited class
+class Child extends Parent {
+    // This method overrides show() of Parent
+    @Override void show()
+    {
+        System.out.println("Child's show()");
     }
-
+}
+ 
+// Driver class
+public class Main {
     public static void main(String[] args)
     {
-        Scanner inout = new Scanner(System.in);
-        //int n = inout.nextInt();
-        sample obj = new sample();
-
-        int grid[][] = {{0,1}};
-        int x = obj.orangesRotting(grid);
-        System.out.println("Ans:"+x);
-
-        return;
+        // If a Parent type reference refers
+        // to a Parent object, then Parent's
+        // show is called
+        Parent obj1 = new Parent();
+        obj1.show();
+ 
+        // If a Parent type reference refers
+        // to a Child object Child's show()
+        // is called. This is called RUN TIME
+        // POLYMORPHISM.
+        Parent obj2 = new Child();
+        obj2.show();
     }
 }

@@ -9,33 +9,40 @@ typedef vector<int> vi;
 #define REP(i,a,b) for(int i = a; i <= b; i++)
 
 
-void helper(vector<int>&nums, vector<vector<int>>& ans, vector<int> v, int curr, int lastNum)
-{
-    if(curr >= nums.size())
+// C++ Program to illustrate how to implement runtime
+// function overriding using virtual function
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    // Declare the function as virtual to allow overriding
+    // in derived classes
+    virtual void display()
     {
-        ans.push_back(v);
-        return;
+        cout << "Display method of Base class" << endl;
     }
 
-    while(nums[curr] == lastNum && curr < nums.size())
-    curr++;
+    // Virtual destructor to ensure proper cleanup of
+    // derived class objects
+    virtual ~Base() {}
+};
 
-    int x = nums[curr];
-    while(nums[curr] == x && curr < nums.size())
+class Derived : public Base {
+public:
+    // Override the display method
+    void display()
     {
-        helper(nums,ans,v,curr+1,lastNum);
-        v.push_back(nums[curr]);
-        lastNum = nums[curr];
-        curr++;
+        cout << "Display method of Derived class" << endl;
     }
-}
 
-vector<vector<int>> subsetsWithDup(vector<int>& nums) {
-    sort(nums.begin(),nums.end());
-    vector<vector<int>> ans;
-    helper(nums,ans,{},0,INT_MIN);
-    return ans;
-}
+    void call()
+    {
+        cout << "HELO"<< endl;
+    }
+};
+
+
 int main()
 {
     //1. Always use long unless input
@@ -73,17 +80,18 @@ int main()
     Uint    4.29e9      0
     Long    9.22e18     -9.22e18
     */
-    
-   vector<int> a = {1,1,2};
-   auto x = subsetsWithDup(a);
-   for(auto y : x)
-   {
-        cout << "[" ;
-        for(auto z : y)
-        cout << z << " " ;
-        cout << "] "; 
-   }
-   
+    Base* basePtr;
+    Derived derivedObj;
+
+    // Point base class pointer to derived class object
+    basePtr = &derivedObj;
+
+    // Call the display function
+    // This will call the display method of the Derived
+    // class due to the virtual function mechanism
+    basePtr->display();
+
+    return 0;
 
 
     return 0;
