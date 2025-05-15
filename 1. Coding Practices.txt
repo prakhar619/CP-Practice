@@ -1,0 +1,33 @@
+Question Attempt:
+    1. Question Read Carefully. What is input and What is output?
+    2. Methodology mentally
+    3. Constrainst
+    4. Final Methodology/Concept after considering constraint.
+    5. All Flow decided (Theoretically)
+
+    6. Code with conventions
+        i. Hungarian Notation
+        ii. great variable names
+        iii. not look great, but eazy to debug
+        iv. Convention:
+            a. All Global variable: ALL CAPS
+            b. Class Name: PascalCase
+            c. Function / Method: Pascal Case
+            d. Fields / Attributes : 
+                3.i Private Member : _camelCase
+                3.ii Static Member: s_camelCase
+                3.iii Public: Pascal 
+                3.iv Local variable: camelCase
+    7. Control all flows (assertions)
+    8. Final Revise for Typo/Silly/Miscell
+
+Question Document:          (Blog)
+    1. Question Name 
+        Method 1: 
+            Time Complexity 
+            Description
+                Answer why you thought of this approach, 
+                Edge cases to check 
+        Method 2:
+            Time Complexity
+            Description
