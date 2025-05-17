@@ -2,8 +2,8 @@ FROM continuumio/miniconda3
 
 # Install required packages
 RUN conda update -n base -c defaults conda && \
-    conda install -c conda-forge xeus-cling jupyterlab
-
+    conda install -c conda-forge xeus-cling jupyterlab && \
+    conda install notebook
 
 # Set working directory
 WORKDIR /home

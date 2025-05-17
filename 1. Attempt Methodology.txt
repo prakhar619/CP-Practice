@@ -31,3 +31,46 @@ Question Document:          (Blog)
         Method 2:
             Time Complexity
             Description
+
+Pattern Categories
+I. Analysis Pattern
+    1. Concrete Examples
+    2. Case Analysis
+    3. Iterative Refinement
+    4. Reduction
+    5. Graph Modelling
+II. Algorithm Design Pattern
+    1. Sorting
+    2. Recursion 
+    3. Divide and Conquer
+    4. Dynamic Programming 
+    5. Greedy Algorithm
+    6. Invariant
+
+Concrete Example:
+    Start from a single example case,
+    Build mathematical model for it 
+    use Heuristic if required
+ 
+Case Analysis 
+    Divide question into cases 
+    Case need not be mutually exclusive
+    Must be exhaustive 
+
+Iterative Refinement of Brute Force 
+    Also called: Exhaustive Search \ Generate-And-Test 
+
+Reduction
+    Using other solution/function as a subroutine to solve the Problem
+
+Graph Modelling 
+    Make table/chart to find patterns
+
+
+
+
+Invariant 
+    an invariant is a condition that is true during execution of program 
+    Identifying right invariant is ART 
+    
+    

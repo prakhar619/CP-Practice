@@ -35,5 +35,41 @@ Array & Stack -> Awesome Combination
 
 
 
+Data Structures 
+    Skip Lists
+    Treaps
+    Fibonacci Heap 
+    Tries
+    DIsjoint-set 
+
+Non Constructible Change Problem:
+    1. Basic: Smallest Non Constructible Value
+    2. Towers of Hanoi
+    3. Levenshtein Distance Problem 
+    4. Maximum water that is Trappable 
+
+Max 5sort need to get 1st max, 2nd max and 3rd max out of 25 numbers
+
+From array A of n numbers rearrange to B array such that 
+    B[0] <= B[1] >= B[2] <= B[3] >= B[4] <= B[5] ...
+    Method 1 
+        O(n log n)
+    Method 2 
+        O(n)
+
+Problem of String Search: 
+    given s (search string) and t (text), find all occurence of s in t 
+    Method 1 
+        O(n m)
+    Method 2 
+        O(n + m):   Boyer Moore String Search 
+
+Maximum Sumarray Sum 
+
+
+CNF-SAT Problem 
+    NP problem
+
+
 
 

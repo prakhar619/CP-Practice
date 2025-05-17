@@ -1,0 +1,5 @@
+Bit Operators
+    &,|,~,>>,<<,^
+    
+Looping 
+Look up Table Approach
