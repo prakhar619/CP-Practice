@@ -1,4 +1,4 @@
-# Daily Competitive Programming Practice
+# Daily Competitive Programming Practice 
 
 This repository documents my daily practice of competitive programming. Each day, I solve at least one problem and publish a detailed solution in the form of a Jupyter notebook. The objective is to build consistency, deepen understanding, and maintain a searchable knowledge base of problem-solving approaches.
 
