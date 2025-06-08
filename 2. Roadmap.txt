@@ -1,0 +1,10 @@
+1. Coursework
+    i. Data structure
+    ii. Algorithms
+2. Neetcode                                     - 150       https://neetcode.io/roadmap
+3. Basic Coding List                            - 320
+4. Tiwari Leetcode List                         - 260       https://leetcode.com/problem-list/eksrj1dd/
+5. Striver A2Z List                             - 455       https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2
+6. Project Euler:                                           https://projecteuler.net/about
+7. Elements of Programming Interviews in Java   
+8. Striver SDE Sheet:                           - 191       https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
