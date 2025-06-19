@@ -73,3 +73,48 @@ CNF-SAT Problem
 
 
 
+
+------------------Remaining
+https://leetcode.com/problems/n-queens
+
+https://leetcode.com/problems/sudoku-solver
+
+https://takeuforward.org/data-structure/m-coloring-problem/ 
+
+https://takeuforward.org/data-structure/median-of-row-wise-sorted-matrix/
+
+https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+
+K-th element of 2 sorted array
+
+https://leetcode.com/problems/lfu-cache/description/
+
+https://www.geeksforgeeks.org/problems/maximum-sum-combination/1
+
+https://leetcode.com/problems/sliding-window-maximum/
+
+https://www.geeksforgeeks.org/find-the-maximum-of-minimums-for-every-window-size-in-a-given-array/
+
+https://www.geeksforgeeks.org/problems/minimum-characters-to-be-added-at-front-to-make-string-palindrome/1
+
+morris inorder/preorder
+
+preorder, inorder, postorder in single traversal
+
+https://www.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1
+
+Find the inorder predecessor/successor of a given Key in BST.
+
+https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/description/
+
+Cycle in 
+	i. Directed graph
+	ii. Undirected graph
+	
+	Using
+		i. BFS
+		ii. DFS
+
+Strongly Connected Component(using KosaRajuΓÇÖs algo)
+
+
